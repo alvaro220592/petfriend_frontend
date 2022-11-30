@@ -1,0 +1,142 @@
+@import '@/assets/scss/_main';
+
+@media screen and (max-width: 767px) {
+    .conteudo {
+        #sidebar:not(.expanded),
+        #sidebar.expanded + .rightSide,
+        #sidebar:not(.expanded) + .rightSide,
+        .expanded {
+            transition: $transition;
+        }
+
+        // Sidebar sem a classe expanded
+        #sidebar:not(.expanded) {
+            width: $xsNotExpandedSidebarWidth;
+        }
+
+        // Conteúdo interno (o símbolo + indica um elemento próximo)
+        #sidebar.expanded + .rightSide {
+            margin-left: $xsExpandedSidebarWidth;
+        }
+
+        .expanded {
+            width: $xsExpandedSidebarWidth;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #sidebar:not(.expanded),
+    #sidebar.expanded + .rightSide,
+    #sidebar:not(.expanded) + .rightSide,
+    .expanded {
+        transition: $transition;
+    }
+
+    .conteudo {
+        #sidebar:not(.expanded) {
+            width: $smNotExpandedSidebarWidth;
+        }
+
+        #sidebar.expanded + .rightSide {
+            margin-left: $smExpandedSidebarWidth;
+        }
+
+        .expanded {
+            width: $smExpandedSidebarWidth;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #sidebar:not(.expanded),
+    #sidebar.expanded + .rightSide,
+    #sidebar:not(.expanded) + .rightSide,
+    .expanded {
+        transition: $transition;
+    }
+
+    .conteudo {
+        #sidebar:not(.expanded) {
+            width: $mdNotExpandedSidebarWidth;
+        }
+
+        #sidebar.expanded + .rightSide {
+            margin-left: $mdExpandedSidebarWidth;
+        }
+
+        .expanded {
+            width: $mdExpandedSidebarWidth;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #sidebar:not(.expanded),
+    #sidebar.expanded + .rightSide,
+    #sidebar:not(.expanded) + .rightSide,
+    .expanded {
+        transition: $transition;
+    }
+
+    .conteudo {
+        #sidebar:not(.expanded) {
+            width: $lgNotExpandedSidebarWidth;
+        }
+
+        #sidebar.expanded + .rightSide {
+            margin-left: $lgExpandedSidebarWidth;
+        }
+
+        .expanded {
+            width: $lgExpandedSidebarWidth;
+        }
+    }
+}
+
+#sidebar:not(.expanded) span {
+    display: none;
+    transition: $transition;
+    animation: fadeOut $transition;
+}
+
+#sidebar.expanded span {
+    display: block;
+    transition: $transition;
+    animation: fadeIn $transition;
+}
+
+#sidebar.expanded .menu_list li {
+    display: flex;
+}
+
+#sidebar .menu_list li i {
+    color: $marrom;
+}
+
+#sidebar:not(.expanded) i, #sidebar.expanded i {
+    margin: 0px 15px;
+}
+
+#sidebar {
+    min-height: 100vh;
+    background-color: $pastel;
+    position: fixed;
+    border-right: 1px solid $laranja;
+}
+
+.menu_list {
+    margin-top: 50px;
+    padding: 0px;
+    list-style: none;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}

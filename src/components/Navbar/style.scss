@@ -1,0 +1,18 @@
+@import '@/assets/scss/_main';
+
+nav {
+    height: 50px;
+    background-color: $pastel;
+    border-bottom: 1px solid $laranja;
+
+    .menu_button {
+        font-size: 33px;
+        cursor: pointer;
+        padding: 4px 8px;
+    }
+    
+    .menu_button:hover {
+        background-color: $laranja;
+        transition: $transition;
+    }
+}

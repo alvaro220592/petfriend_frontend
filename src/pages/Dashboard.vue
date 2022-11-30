@@ -4,17 +4,16 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
 
 <template>
     <AuthenticatedLayout>
-        <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Dashboard
-            </h2>
-        </template>
+        
+        <!-- <div class="py-12"> -->
+            <!-- <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"> -->
+            <div class="pagina">
 
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <p class="breadcrumb">Início > Teste</p>
+                
                 <div class="main_card">
                     <!-- <div class="p-6 bg-white border-b border-gray-200"> -->
-                    
+                    <h1>Título</h1>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum temporibus corporis aperiam et in tempora consequatur, aliquam perspiciatis harum placeat itaque dolorum similique. Illum explicabo quia nemo ut error laboriosam.
                     Dolorem iusto nemo cupiditate temporibus recusandae possimus quae sed explicabo, in ea enim quod earum corrupti dolores dicta repellendus eum praesentium quasi at perspiciatis esse eos fuga! Facilis, eaque labore?
                     Aut, alias, labore corporis magnam vero commodi nemo reiciendis recusandae cumque, dolorum ab a illo eveniet tenetur quod fugit sequi! Laborum error quas quisquam distinctio aliquam, tempora eveniet. Assumenda, exercitationem!
@@ -27,7 +26,7 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
                     Iusto, consequatur alias aliquid reiciendis, dignissimos tenetur provident, nam repudiandae aut quos soluta vero aperiam porro quisquam necessitatibus quod magnam incidunt! Ipsum corporis modi, quam natus quae officiis amet facere?
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </AuthenticatedLayout>
 </template>
 
@@ -35,11 +34,16 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
     
     @import '@/assets/scss/_main';
 
-    .main_card {
-        background-color: $pastel;
-        padding: 20px;
-        border: 1px solid $laranja;
-        border-radius: 4px;
+    .pagina {
+        padding: 10px 0px;
+
+        .main_card {
+            background-color: $palido;
+            padding: 20px;
+            border: 1px solid $laranja;
+            border-radius: 4px;
+            margin: 0px 10px;
+        }
     }
 
 </style>

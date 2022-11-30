@@ -41,7 +41,7 @@ import ApplicationLogo from '@/components/ApplicationLogo.vue'
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient($fundo, $fundo), url("@/assets/img/animais/animais2.jpg");
+        background-image: linear-gradient($fundo_guest, $fundo_guest), url("@/assets/img/animais/animais2.jpg");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-color: $turquesa;

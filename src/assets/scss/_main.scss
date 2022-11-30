@@ -5,10 +5,33 @@
 
 * {
     font-family: 'Comic Neue', cursive;
-    font-family: 'Mali', cursive;    
+    font-family: 'Mali', cursive;
+}
+
+.breadcrumb {
+    background-color: $pastel;
+    width: 98%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid $laranja;
 }
 
 $transition: .3s;
+
+$xsNotExpandedSidebarWidth: 50px;
+$xsExpandedSidebarWidth: 150px;
+
+$smNotExpandedSidebarWidth: 50px;
+$smExpandedSidebarWidth: 150px;
+
+
+$mdNotExpandedSidebarWidth: 50px;
+$mdExpandedSidebarWidth: 200px;
+
+$lgNotExpandedSidebarWidth: 50px;
+$lgExpandedSidebarWidth: 200px;
 
 // TELAS
 // xs (for phones - screens less than 768px wide)
