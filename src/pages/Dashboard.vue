@@ -9,7 +9,7 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
             <!-- <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"> -->
             <div class="pagina">
 
-                <p class="breadcrumb">Início > Teste</p>
+                <p class="breadcrumbs"><span>Início > Teste</span></p>
                 
                 <div class="main_card">
                     <!-- <div class="p-6 bg-white border-b border-gray-200"> -->

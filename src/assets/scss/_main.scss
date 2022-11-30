@@ -8,17 +8,18 @@
     font-family: 'Mali', cursive;
 }
 
-.breadcrumb {
+.breadcrumbs  {
+    padding-top: 10px;
+}
+.breadcrumbs span {
     background-color: $pastel;
-    width: 98%;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 10px 10px;
     padding: 5px;
     border: 1px solid $laranja;
 }
 
-$transition: .3s;
+$transition_geral: .3s;
+$transition_lenta: 1s;
 
 $xsNotExpandedSidebarWidth: 50px;
 $xsExpandedSidebarWidth: 150px;
