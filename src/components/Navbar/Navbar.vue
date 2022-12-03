@@ -15,6 +15,16 @@ export default {
             let sidebar = document.getElementById('sidebar')
 
             sidebar.classList.toggle('expanded')
+
+            if(sidebar.classList.contains('expanded')) {
+                if(!localStorage.getItem('sidebarExpanded')) {
+                    localStorage.setItem('sidebarExpanded', 'sidebarExpanded');
+                }
+            }else {
+                if(localStorage.getItem('sidebarExpanded')) {
+                    localStorage.removeItem('sidebarExpanded');
+                }
+            }
         },
     },
 }

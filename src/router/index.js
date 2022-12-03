@@ -8,6 +8,7 @@ import Register from '@/pages/auth/Register.vue'
 import ForgotPassword from '@/pages/auth/ForgotPassword.vue'
 import ResetPassword from '@/pages/auth/ResetPassword.vue'
 import VerifyEmail from '@/pages/auth/VerifyEmail.vue'
+import Schedule from '@/pages/schedule/Schedule.vue'
 
 const APP_NAME = import.meta.env.VITE_APP_NAME
 
@@ -49,6 +50,15 @@ const routes = [
         component: Dashboard,
         meta: {
             title: 'Dashboard',
+            guard: 'auth',
+        },
+    },
+    {
+        path: '/schedule',
+        name: 'schedule',
+        component: Schedule,
+        meta: {
+            title: 'Schedule',
             guard: 'auth',
         },
     },

@@ -94,24 +94,35 @@
     }
 }
 
-#sidebar:not(.expanded) span, #sidebar:not(.expanded) .submenu_list {
-    display: none;
-    transition: $transition_geral;
-    animation: fadeOut $transition_geral;
-}
-
-#sidebar.expanded span, #sidebar.expanded .submenu_list{
+#sidebar.expanded span {
     display: block;
-    // transition: $transition_geral;
-    animation: fadeIn $transition_lenta;
+    // animation: fadeIn $transition_lenta;
 }
 
-#sidebar.expanded .menu_list li {
+#sidebar.expanded .submenu_list li {
     display: flex;
+}
+
+#sidebar.expanded .menu .router-link {
+    display: flex;
+}
+
+#sidebar.expanded .logo__text h1{
+    // animation: fadeIn 1.5s;
 }
 
 #sidebar:not(.expanded) i, #sidebar.expanded i {
     margin: 0px 15px;
+}
+
+#sidebar:not(.expanded) span, #sidebar:not(.expanded) .submenu_list {
+    display: none;
+    animation: fadeOut $transition_geral;
+}
+
+#sidebar:not(.expanded) .logo__text h1{
+    display: none;
+    animation: fadeOut $transition_geral;
 }
 
 #sidebar {
@@ -119,15 +130,6 @@
     background-color: $pastel;
     position: fixed;
     border-right: 1px solid $laranja;
-}
-
-#sidebar:not(.expanded) .logo__text h1{
-    display: none;
-    animation: fadeIn $transition_geral;
-}
-
-#sidebar.expanded .logo__text h1{
-    animation: fadeIn 1.5s;
 }
 
 .logo__text {
@@ -143,12 +145,49 @@
         text-shadow: 2px 2px 5px $abobora;
         font-weight: 700;
         overflow: hidden;
-        // box-shadow: 1px 1px 3px 3px $laranja;
     }
 }
 
+#sidebar i, #sidebar span {
+    color: $turquesa;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: $sombra;
+    text-shadow: 2px 2px 2px $abobora;
+    font-weight: 700;
+}
+
+#sidebar i {
+    font-size: 20px;
+}
+
+#sidebar span {
+    margin-top: 5px;
+}
+
+.router-link {
+    text-decoration: none;
+}
+
+.menu {
+    cursor: pointer;
+    padding: 5px 0px;
+}
+
+.menu .router-link {
+    border-radius: 4px;
+}
+
+.menu .router-link:hover, .submenu:hover {
+    background-color: $laranja;
+    transition: $transition_geral;
+}
+
+.submenu {
+    cursor: pointer;
+}
+
 .menu_list {
-    margin-top: 35px;
+    margin-top: 25px;
     padding: 0px;
     list-style: none;
 }
@@ -156,6 +195,16 @@
 .submenu_list {
     padding: 10px;
     list-style: none;
+    cursor: pointer;
+}
+
+.submenu_list.hide {
+    display: none;
+    animation: fadeIn $transition_geral;
+}
+.submenu_list:not(.hide) {
+    display: block;
+    animation: fadeIn $transition_geral;
 }
 
 @keyframes fadeIn {

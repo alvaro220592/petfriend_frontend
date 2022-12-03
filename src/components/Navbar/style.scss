@@ -9,6 +9,11 @@ nav {
         font-size: 33px;
         cursor: pointer;
         padding: 4px 8px;
+        color: $turquesa;
+        -webkit-text-stroke-width: .5px;
+        -webkit-text-stroke-color: $sombra;
+        text-shadow: 2px 2px 2px $abobora;
+        font-weight: 700;
     }
     
     .menu_button:hover {

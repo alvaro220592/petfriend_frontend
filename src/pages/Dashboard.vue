@@ -4,15 +4,11 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
 
 <template>
     <AuthenticatedLayout>
-        
-        <!-- <div class="py-12"> -->
-            <!-- <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"> -->
             <div class="pagina">
 
                 <p class="breadcrumbs"><span>Início > Teste</span></p>
                 
                 <div class="main_card">
-                    <!-- <div class="p-6 bg-white border-b border-gray-200"> -->
                     <h1>Título</h1>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum temporibus corporis aperiam et in tempora consequatur, aliquam perspiciatis harum placeat itaque dolorum similique. Illum explicabo quia nemo ut error laboriosam.
                     Dolorem iusto nemo cupiditate temporibus recusandae possimus quae sed explicabo, in ea enim quod earum corrupti dolores dicta repellendus eum praesentium quasi at perspiciatis esse eos fuga! Facilis, eaque labore?
@@ -26,7 +22,6 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
                     Iusto, consequatur alias aliquid reiciendis, dignissimos tenetur provident, nam repudiandae aut quos soluta vero aperiam porro quisquam necessitatibus quod magnam incidunt! Ipsum corporis modi, quam natus quae officiis amet facere?
                 </div>
             </div>
-        <!-- </div> -->
     </AuthenticatedLayout>
 </template>
 
