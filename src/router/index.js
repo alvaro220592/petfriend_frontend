@@ -9,6 +9,7 @@ import ForgotPassword from '@/pages/auth/ForgotPassword.vue'
 import ResetPassword from '@/pages/auth/ResetPassword.vue'
 import VerifyEmail from '@/pages/auth/VerifyEmail.vue'
 import Schedule from '@/pages/schedule/Schedule.vue'
+import Profile from '@/pages/settings/profiles/Profile.vue'
 
 const APP_NAME = import.meta.env.VITE_APP_NAME
 
@@ -58,7 +59,7 @@ const routes = [
         name: 'schedule',
         component: Schedule,
         meta: {
-            title: 'Schedule',
+            title: 'Agenda',
             guard: 'auth',
         },
     },
@@ -79,7 +80,7 @@ const routes = [
         name: 'register',
         component: Register,
         meta: {
-            title: 'Register',
+            title: 'Cadastro de usuário',
             // guard: 'guest',
             guard: 'auth',
         },
@@ -128,6 +129,15 @@ const routes = [
     {
         path: '/:pathMatch(.*)*',
         redirect: '/page-not-found',
+    },
+    {
+        path: '/profiles',
+        name: 'profiles',
+        component: Profile,
+        meta: {
+            title: 'Perfis de acesso',
+            guard: 'auth',
+        },
     },
 ]
 

@@ -1,17 +1,10 @@
 <script setup>
-import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
+    import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
 </script>
 
 <template>
-    <AuthenticatedLayout>
-            <div class="pagina">
-
-                <p class="breadcrumbs"><span>Início > Teste</span></p>
-                
-                <div class="main_card">
-                    <h1>Agenda</h1>
-                </div>
-            </div>
+    <AuthenticatedLayout :routeTitle="currentRouteName">
+        <h1>Agenda</h1>
     </AuthenticatedLayout>
 </template>
 
@@ -32,3 +25,13 @@ import AuthenticatedLayout from '@/layouts/AuthenticatedLayout.vue'
     }
 
 </style>
+
+<script>
+    export default {
+        computed: {
+            currentRouteName() {
+                return this.$route.meta.title
+            }
+        }
+    }
+</script>

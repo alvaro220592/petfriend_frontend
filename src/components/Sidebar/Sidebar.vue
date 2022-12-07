@@ -61,7 +61,9 @@
                 </router-link>
                 <ul class="submenu_list hide">
                     <li class="submenu">
-                        <i class="bi bi-chevron-right"></i><span>Perfis de acesso</span>
+                        <router-link class="router-link" to="/profiles">
+                            <i class="bi bi-chevron-right"></i><span>Perfis de acesso</span>
+                        </router-link>
                     </li>
                 </ul>
             </li>

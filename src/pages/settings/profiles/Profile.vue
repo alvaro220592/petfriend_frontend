@@ -4,20 +4,18 @@
 
 <template>
     <AuthenticatedLayout :routeTitle="currentRouteName">
-        <h1>Exemplos</h1>
+        PROFILEEEEEE
     </AuthenticatedLayout>
 </template>
 
-<style lang="scss" scoped>
-    @import '@/assets/scss/_main';
-</style>
-
 <script>
     export default {
+        name: 'Profile',
+
         computed: {
             currentRouteName() {
                 return this.$route.meta.title
-            },
-        },
+            }
+        }
     }
 </script>

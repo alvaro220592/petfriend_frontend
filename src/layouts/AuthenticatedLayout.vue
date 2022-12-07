@@ -32,12 +32,17 @@ const submitLogout = () => {
             <Sidebar />
 
             <aside class="rightSide">
-
                 <Navbar />
 
                 <!-- Page Content -->
                 <main>
-                    <slot />
+                    <div class="pagina">
+                        <p class="breadcrumbs"><span>Início > {{ routeTitle }}</span></p>
+
+                        <div class="main_card">
+                            <slot />
+                        </div>
+                    </div>
                 </main>
             </aside>
         </section>
@@ -47,6 +52,10 @@ const submitLogout = () => {
 <script>
 export default {
     mounted() {},
+
+    props: {
+        routeTitle: String
+    },
 
     methods: {},
 }
@@ -96,4 +105,16 @@ export default {
         }
     }
 }
+
+    .pagina {
+        padding: 10px 0px;
+
+        .main_card {
+            background-color: $palido;
+            padding: 20px;
+            border: 1px solid $laranja;
+            border-radius: 4px;
+            margin: 0px 10px;
+        }
+    }
 </style>

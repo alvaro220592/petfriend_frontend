@@ -30,74 +30,98 @@ const submitRegister = () => {
 </script>
 
 <template>
-    <AuthenticatedLayout>
-        <div class="pagina">
-            <p class="breadcrumbs"><span>Início > Teste</span></p>
+    <AuthenticatedLayout :routeTitle="currentRouteName">
 
-            <div class="main_card">
-                <ValidationErrors class="mb-4" :errors="errors" />
+        <ValidationErrors class="mb-4" :errors="errors" />
 
-                <form @submit.prevent="submitRegister">
-                    <div>
-                        <InputLabel for="name" value="Nome" />
-                        <TextInput
-                            id="name"
-                            type="text"
-                            class="mt-1 block w-full"
-                            v-model="form.name"
-                            required
-                            autofocus
-                            autocomplete="name" />
-                    </div>
-
-                    <div class="mt-4">
-                        <InputLabel for="email" value="Email" />
-                        <TextInput
-                            id="email"
-                            type="email"
-                            class="mt-1 block w-full"
-                            v-model="form.email"
-                            required
-                            autocomplete="username" />
-                    </div>
-
-                    <div class="mt-4">
-                        <InputLabel for="password" value="Senha" />
-                        <TextInput
-                            id="password"
-                            type="password"
-                            class="mt-1 block w-full"
-                            v-model="form.password"
-                            required
-                            autocomplete="new-password" />
-                    </div>
-
-                    <div class="mt-4">
-                        <InputLabel
-                            for="password_confirmation"
-                            value="Confirmar senha" />
-                        <TextInput
-                            id="password_confirmation"
-                            type="password"
-                            class="mt-1 block w-full"
-                            v-model="form.password_confirmation"
-                            required
-                            autocomplete="new-password" />
-                    </div>
-
-                    <div class="flex items-center justify-end mt-4">
-                        <!-- <router-link
-                    to="/login"
-                    class="underline text-sm text-gray-600 hover:text-gray-900">
-                    Já tem cadastro?
-                </router-link> -->
-
-                        <PrimaryButton class="ml-4" :processing="processing">
-                            Cadastrar
-                        </PrimaryButton>
-                    </div>
-                </form>
+        <form @submit.prevent="submitRegister">
+            <div>
+                <InputLabel for="name" value="Nome" />
+                <TextInput
+                    id="name"
+                    type="text"
+                    class="mt-1 block w-full"
+                    v-model="form.name"
+                    required
+                    autofocus
+                    autocomplete="name" />
             </div>
-        </div>
+
+            <div class="mt-4">
+                <InputLabel for="email" value="Email" />
+                <TextInput
+                    id="email"
+                    type="email"
+                    class="mt-1 block w-full"
+                    v-model="form.email"
+                    required
+                    autocomplete="username" />
+            </div>
+
+            <div class="mt-4">
+                <InputLabel for="role" value="Email" />
+                <TextInput
+                    id="role"
+                    type="text"
+                    class="mt-1 block w-full"
+                    v-model="form.role"
+                    required
+                    autocomplete="username" />
+            </div>
+
+            <div class="mt-4">
+                <InputLabel for="role" value="Perfil de acesso" />
+                <select name="role" id="role" class="form-control">
+                    <option value="1">Usuário</option>
+                    <option value="2">Administrador</option>
+                </select>
+            </div>
+
+            <div class="mt-4">
+                <InputLabel for="password" value="Senha" />
+                <TextInput
+                    id="password"
+                    type="password"
+                    class="mt-1 block w-full"
+                    v-model="form.password"
+                    required
+                    autocomplete="new-password" />
+            </div>
+
+            <div class="mt-4">
+                <InputLabel
+                    for="password_confirmation"
+                    value="Confirmar senha" />
+                <TextInput
+                    id="password_confirmation"
+                    type="password"
+                    class="mt-1 block w-full"
+                    v-model="form.password_confirmation"
+                    required
+                    autocomplete="new-password" />
+            </div>
+
+            <div class="flex items-center justify-end mt-4">
+                <!-- <router-link
+            to="/login"
+            class="underline text-sm text-gray-600 hover:text-gray-900">
+            Já tem cadastro?
+        </router-link> -->
+
+                <PrimaryButton class="ml-4" :processing="processing">
+                    Cadastrar
+                </PrimaryButton>
+            </div>
+        </form>
     </AuthenticatedLayout>
 </template>
+
+<script>
+    export default {
+        computed: {
+            currentRouteName() {
+                return this.$route.meta.title
+            }
+        }
+    }
+</script>

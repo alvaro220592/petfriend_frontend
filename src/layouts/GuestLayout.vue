@@ -14,17 +14,24 @@ import ApplicationLogo from '@/components/ApplicationLogo.vue'
 
         <!-- <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-red-700 shadow-md overflow-hidden sm:rounded-lg"> -->
         <div class="guestCard">
-            <div class="logo">
-                <div class="logo__text">
+            <div class="row">
+                <!-- <div class="logo__text">
                     <h1>
                         PetFriend
                     </h1>
-                </div>
-                <div class="logo__img">
+                </div> -->
+                <!-- <div class="logo__img"> -->
                     <!-- <i class="bi bi-twitter"></i> -->
                     <!-- <a href="https://www.flaticon.com/free-icons/animals" title="animals icons">Animals icons created by Eucalyp - Flaticon</a> -->
                     <!-- <img src="@/img/logo__img.png" alt=""> -->
+                <!-- </div> -->
+
+                <div class="col-12 text-center">
+                    <h1 class="logo_titulo">
+                        PetFriend
+                    </h1>
                 </div>
+                
             </div>
             <slot />
         </div>
@@ -53,27 +60,14 @@ import ApplicationLogo from '@/components/ApplicationLogo.vue'
             border: 3px solid $laranja;
             box-shadow: 1px 1px 2px $sombra;
 
-            .logo {
-                display: flex;
-
-                .logo__text {
-                    width: 100%;
-
-                    h1 {
-                        font-size: 50px;
-                        border-radius: 4px;
-                        padding: 10px;
-                        width: 100%;
-                        text-align: center;
-                        color: $turquesa;
-                        -webkit-text-stroke-width: 2px;
-                        -webkit-text-stroke-color: $sombra;
-                        text-shadow: 2px 2px 5px $abobora;
-                        font-weight: 700;
-                        // background-color: $laranja;
-                        // box-shadow: 1px 1px 3px 3px $laranja;
-                    }
-                }
+            .logo_titulo {
+                font-size: 50px;
+                border-radius: 4px;
+                color: $turquesa;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: $sombra;
+                text-shadow: 2px 2px 5px $abobora;
+                font-weight: 700;
             }
         }
     }
