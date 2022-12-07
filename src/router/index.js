@@ -80,7 +80,8 @@ const routes = [
         component: Register,
         meta: {
             title: 'Register',
-            guard: 'guest',
+            // guard: 'guest',
+            guard: 'auth',
         },
     },
     {

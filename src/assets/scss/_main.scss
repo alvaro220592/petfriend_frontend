@@ -18,21 +18,33 @@
     border: 1px solid $laranja;
 }
 
+.pagina {
+    padding: 10px 0px;
+
+    .main_card {
+        background-color: $palido;
+        padding: 20px;
+        border: 1px solid $laranja;
+        border-radius: 4px;
+        margin: 0px 10px;
+    }
+}
+
 $transition_geral: .3s;
 $transition_lenta: 1s;
 
 $xsNotExpandedSidebarWidth: 50px;
-$xsExpandedSidebarWidth: 150px;
+$xsExpandedSidebarWidth: 175px;
 
 $smNotExpandedSidebarWidth: 50px;
-$smExpandedSidebarWidth: 150px;
+$smExpandedSidebarWidth: 175px;
 
 
 $mdNotExpandedSidebarWidth: 50px;
-$mdExpandedSidebarWidth: 150px;
+$mdExpandedSidebarWidth: 175px;
 
 $lgNotExpandedSidebarWidth: 50px;
-$lgExpandedSidebarWidth: 150px;
+$lgExpandedSidebarWidth: 175px;
 
 // TELAS
 // xs (for phones - screens less than 768px wide)

@@ -36,7 +36,7 @@
 
             <li class="menu">
                 <router-link class="router-link" to="" @click="expandMenu($event)">
-                    <i class="bi bi-plus-circle-fill"></i>
+                    <i class="bi bi-plus-circle"></i>
                     <span>Cadastro</span>
                 </router-link>
                 <ul class="submenu_list hide">
@@ -47,7 +47,21 @@
                         <i class="bi bi-chevron-right"></i><span>Pets</span>
                     </li>
                     <li class="submenu">
-                        <i class="bi bi-chevron-right"></i><span>Usuários</span>
+                        <router-link class="router-link" to="/register">
+                            <i class="bi bi-chevron-right"></i><span>Usuários</span>
+                        </router-link>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu">
+                <router-link class="router-link" to="" @click="expandMenu($event)">
+                    <i class="bi bi-gear"></i>
+                    <span>Configurações</span>
+                </router-link>
+                <ul class="submenu_list hide">
+                    <li class="submenu">
+                        <i class="bi bi-chevron-right"></i><span>Perfis de acesso</span>
                     </li>
                 </ul>
             </li>
